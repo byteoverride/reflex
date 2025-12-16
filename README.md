@@ -1,8 +1,4 @@
-```markdown
 # Reflex
-
-![Go Version](https://img.shields.io/badge/go-%3E%3D1.19-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
 
 **Reflex** is a high-performance XSS reflection checker tool written in Go. It is designed to aid bug bounty hunters and security professionals in identifying reflected parameters on web pages efficiently.
 
@@ -39,22 +35,18 @@ reflex -f urls.txt -H "Cookie: session=12345" -H "X-Bug-Bounty: byteoverride"
 cat urls.txt | reflex -t 30
 
 ```
+## 📋 Options
 
-##📋 Options| Flag | Description | Default |
-| --- | --- | --- |
-| `-f` | Path to the text file containing URLs | `stdin` |
-| `-o` | Output file for results | `xss_go.txt` |
-| `-t` | Number of concurrent threads | `20` |
-| `-timeout` | HTTP timeout in seconds | `10` |
-| `-H` | Custom header (can be used multiple times) | `None` |
-| `-v` | Enable verbose mode for debugging | `False` |
+| Flag       | Description                                   | Default         |
+|------------|-----------------------------------------------|-----------------|
+| `-f`       | Path to the text file containing URLs          | `stdin`        |
+| `-o`       | Output file for results                        | `xss_go.txt`   |
+| `-t`       | Number of concurrent threads                  | `20`            |
+| `-timeout` | HTTP timeout in seconds                       | `10`            |
+| `-H`       | Custom header (can be used multiple times)     | `None`         |
+| `-v`       | Enable verbose mode for debugging              | `False`        |
+
 
 ##⚠️ DisclaimerThis tool is strictly for educational purposes and authorized security testing. The author is not responsible for any misuse or damage caused by this tool.
 
----
 
-**Developed with ❤️ by [byteoverride**](https://www.google.com/search?q=https://github.com/byteoverride)
-
-```
-
-```
