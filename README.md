@@ -55,5 +55,3 @@ cat urls.txt | reflex -t 30
 
 This tool is strictly for educational purposes and authorized security testing.
 The author is not responsible for any misuse or damage caused by this tool.
-
-```
