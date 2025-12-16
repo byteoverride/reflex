@@ -15,7 +15,7 @@
 To install Reflex, ensure you have **Go** installed and run:
 
 ```bash
-go install [github.com/byteoverride/reflex@latest](https://github.com/byteoverride/reflex@latest)
+go install github.com/byteoverride/reflex@latest
 
 ```
 
