@@ -1,24 +1,24 @@
 # Reflex
 
-**Reflex** is a high-performance XSS reflection checker written in Go. It identifies reflected parameters on web pages and classifies the reflection context — purpose-built for bug bounty hunters and security professionals.
+**Reflex** is a high-performance XSS reflection checker written in Go. It identifies reflected parameters on web pages and classifies the reflection context, purpose-built for bug bounty hunters and security professionals.
 
 ## Features
 
 - **Concurrent scanning** with adjustable thread count
-- **Reflection context detection** — identifies whether canary reflects in HTML body, attribute, `<script>` tag, comment, or response header
-- **Randomized canary** per request — avoids static-string WAF signatures
-- **Smart 403 handling** — auto-pauses with cooldown on WAF detection, retries with jitter (capped at 3 retries per URL)
+- **Reflection context detection** : identifies whether canary reflects in HTML body, attribute, `<script>` tag, comment, or response header
+- **Randomized canary** per request : avoids static-string WAF signatures
+- **Smart 403 handling** : auto-pauses with cooldown on WAF detection, retries with jitter (capped at 3 retries per URL)
 - **Proxy support** — route through Burp, Caido, or any HTTP/SOCKS5 proxy
-- **Per-host rate limiting** — avoid triggering rate limits on individual targets
-- **JSONL output** — machine-readable output for tool chaining
-- **User-Agent rotation** — randomized per request from a pool of common browsers
-- **URL deduplication** — skips duplicate URLs automatically
-- **Parameter name reflection** — optionally tests if the parameter name itself is reflected
-- **Response header reflection** — checks if canary appears in response headers
-- **Body size limit** — caps response reads at 5MB to prevent OOM on large pages
-- **Stdin support** — pipe URLs from waybackurls, gau, katana, etc.
-- **Progress stats** — periodic updates on processed/reflected/errors/skipped counts
-- **Graceful shutdown** — Ctrl+C prints summary before exiting
+- **Per-host rate limiting** : avoid triggering rate limits on individual targets
+- **JSONL output** : machine-readable output for tool chaining
+- **User-Agent rotation** : randomized per request from a pool of common browsers
+- **URL deduplication** : skips duplicate URLs automatically
+- **Parameter name reflection** : optionally tests if the parameter name itself is reflected
+- **Response header reflection** : checks if canary appears in response headers
+- **Body size limit** : caps response reads at 5MB to prevent OOM on large pages
+- **Stdin support** : pipe URLs from waybackurls, gau, katana, etc.
+- **Progress stats** : periodic updates on processed/reflected/errors/skipped counts
+- **Graceful shutdown** : Ctrl+C prints summary before exiting
 
 ## Installation
 
